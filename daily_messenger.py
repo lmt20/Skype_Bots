@@ -8,8 +8,8 @@ import schedule
 from skpy import Skype
 
 #Channels
-Qxf2_Main='19:5232f2512c9d4fe7bd50afa86a25df69@thread.skype'
-SKYPE_USERNAME = ""
+Qxf2_Main='19:60794b5d0f60406787c1cb2a6ee72db7@thread.skype'
+SKYPE_USERNAME = "lemanhtruong.ptit@gmail.com"
 SKYPE_PASSWORD = ""
 
 scheduleTimeMessage = {
@@ -19,14 +19,10 @@ scheduleTimeMessage = {
     text_const.FIX_END_AFTERNOON_WORKING_TIME : text_const.FIX_END_AFTERNOON_WORKING_MESSAGE,
 }
 
-def get_message():
-    "Return a suitable message based on the day of the week"
-    return configs.START_MORNING_WORKING_MESSAGE
-
 def post_message(msg):
     "Post a message"
     print ("I'm working...", msg)
-    sk = Skype(SKYPE_USERNAME,SKYPE_PASSWORD)
+    sk = Skype(SKYPE_USERNAME, SKYPE_PASSWORD)
     # channel = sk.chats.recent()
     # print(channel)
     channel = sk.chats.chat(Qxf2_Main)
